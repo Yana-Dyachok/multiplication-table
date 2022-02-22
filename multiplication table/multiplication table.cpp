@@ -14,7 +14,7 @@ int Result(int n, int m, int prod, int mark) {//функція в якій пе�
             cin >> prod;//користувач вводить свій результат
             if (prod != n * m)cout << "Wrong answer. Right is =" << n * m << endl;
             else { cout << "Correct answer!" << endl; mark++; }//за правильні відповіді нараховуємо бали
-        if(i==1)cout << "The second degree" << endl;//за допомогою даних умов оголошуємо  рывны перевірки
+        if(i==1)cout << "The second degree" << endl;//за допомогою даних умов оголошуємо  рівні перевірки
         if (i == 4)cout << "The third degree" << endl;
         if (i == 8)cout << "The fourth degree" << endl;
     }
@@ -22,9 +22,9 @@ int Result(int n, int m, int prod, int mark) {//функція в якій пе�
     return mark;//функція повертає значення оцінки
 }
 int main()
-{   int mark = 0, prod = 0;//оцынка та значення добутку, яке вводить користувач
+{   int mark = 0, prod = 0;//оцінка та значення добутку, яке вводить користувач
     int n = 0, m = 0;//множники
-    cout << "If you don't know the multiplication table well, we'll test your knowledge" << endl;
+    cout << "If you think you don't know the multiplication table well, we'll test your knowledge" << endl;
     cout << "Let's start with the first degree" << endl;
     mark = Result(n, m, prod, mark);//звертаємось до функції присвоємо її значення - mark
     ofstream file;
@@ -46,7 +46,7 @@ int main()
             file << "You know the multiplication table almost well. You get= " << mark << " ball" << endl;//вводимо значення результату у файл
         }
         if(mark==12) {//максимальний результат
-            file<< "Congradulation! You know multiplication table well. You get the highest ball-"<<mark << endl;//вводимо значення результату у файл
+            file<< "Congratulation! You know multiplication table well. You get the highest ball-"<<mark << endl;//вводимо значення результату у файл
         }
         file.close();//закриваємо файл	
     }
